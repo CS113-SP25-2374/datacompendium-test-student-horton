@@ -1,4 +1,4 @@
-package CS113;
+package CS113.interfaces;
 public interface ListInterface <E> {
     /**
      * Adds an element to the end of the list

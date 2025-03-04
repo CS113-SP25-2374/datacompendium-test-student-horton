@@ -1,6 +1,6 @@
 package CS113;
 
-import java.util.ArrayList;
+import CS113.interfaces.ListInterface;
 
 public class ArrayListPH<E> implements ListInterface<E> {
     private E[] array;
@@ -47,10 +47,16 @@ public class ArrayListPH<E> implements ListInterface<E> {
             array[array.length - 1] = element;
         }
 
-        for (int i = size(); i >= index; i--) {
-            array[i] = array[i - 1];
+//        for (int i = size(); i >= index; i--) {
+//            array[i] = array[i - 1];
+//        }
+//        array[index] = element;
+
+        for (int i = index; i < array.length; i++) {
+            E temp = array[i];
+            array[i] = element;
+            element = temp;
         }
-        array[index] = element;
 
 //        for (int i = index; i < array.length - 1; i++) {
 //            E temp = array[(i + 1)];
