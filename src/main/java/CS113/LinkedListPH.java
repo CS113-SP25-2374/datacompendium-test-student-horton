@@ -212,15 +212,29 @@ public class LinkedListPH<E> implements ListInterface<E>, ListIterableInterface<
     }
 
     @Override
-    public void addFirst(E element) {
-        Node<E> node = new Node<>(element);
-        linkPrev(node, head);
+    public boolean offerFirst(E element) {
+        addFirst(element);
+        return true;
     }
 
     @Override
-    public void addLast(E element) {
+    public boolean offerLast(E element) {
+        addLast(element);
+        return true;
+    }
+
+    @Override
+    public boolean addFirst(E element) {
+        Node<E> node = new Node<>(element);
+        linkPrev(node, head);
+        return true;
+    }
+
+    @Override
+    public boolean addLast(E element) {
         Node<E> node = new Node<>(element);
         linkNode(node, tail);
+        return true;
     }
 
     @Override

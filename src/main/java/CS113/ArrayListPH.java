@@ -3,7 +3,7 @@ package CS113;
 import CS113.interfaces.ListInterface;
 
 public class ArrayListPH<E> implements ListInterface<E> {
-    private E[] array;
+    protected E[] array;
     final static int DEFAULT_SIZE = 10;
 
     public ArrayListPH() {
